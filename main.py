@@ -8,10 +8,10 @@ class Person(BaseModel):
 
 person = Person(name="John", age=20)
 js = person.model_dump_json(indent=4)
-print(js)
+#print(js)
 
 with open('person.json', 'w') as f:
     f.write(js)
 
 with open('person.json', 'r') as f:
-   p = Person.load_from_json(json.load(f))
+    print(f.read())
